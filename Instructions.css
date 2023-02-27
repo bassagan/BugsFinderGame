@@ -11,11 +11,11 @@
 }
 
 .u-section-1 .u-layout-cell-1 {
-  min-height: 655px;
+  min-height: 791px;
 }
 
 .u-section-1 .u-container-layout-1 {
-  padding: 0 48px;
+  padding: 0 60px;
 }
 
 .u-section-1 .u-icon-1 {
@@ -32,23 +32,36 @@
 }
 
 .u-section-1 .u-text-2 {
-  margin: 12px 12px 0;
+  font-size: 1.125rem;
+  margin: 24px 21px 0 0;
 }
 
 .u-section-1 .u-text-3 {
-  font-weight: 700;
   font-size: 1.5rem;
-  margin: 231px 12px 0;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 0 21px 0 0;
 }
 
 .u-section-1 .u-text-4 {
-  margin-left: 12px;
-  margin-right: 12px;
-  margin-bottom: 0;
+  line-height: 1.4;
+  background-image: none;
+  font-size: 1.125rem;
+  margin: -19px 0 0;
+}
+
+.u-section-1 .u-text-5 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 48px 21px 0 0;
+}
+
+.u-section-1 .u-text-6 {
+  margin: 24px 21px 0 0;
 }
 
 .u-section-1 .u-image-1 {
-  min-height: 655px;
+  min-height: 791px;
   background-image: url("images/f.elconfidencial.com_original_38a_cac_f6e_38acacf6edc6de28faf711ccbb90053a.jpg");
   background-position: 50% 50%;
 }
@@ -72,30 +85,31 @@
   }
 
   .u-section-1 .u-layout-cell-1 {
-    min-height: 566px;
+    min-height: 652px;
   }
 
   .u-section-1 .u-text-2 {
-    margin-left: 0;
     margin-right: 0;
   }
 
   .u-section-1 .u-text-3 {
-    width: auto;
-    margin-top: 133px;
-    margin-left: 0;
     margin-right: 0;
   }
 
-  .u-section-1 .u-text-4 {
+  .u-section-1 .u-text-5 {
+    width: auto;
+    margin-top: 133px;
+    margin-right: 0;
+  }
+
+  .u-section-1 .u-text-6 {
     width: auto;
     margin-top: 12px;
-    margin-left: 0;
     margin-right: 0;
   }
 
   .u-section-1 .u-image-1 {
-    min-height: 540px;
+    min-height: 652px;
   }
 }
 
@@ -114,7 +128,7 @@
   }
 
   .u-section-1 .u-image-1 {
-    min-height: 414px;
+    min-height: 499px;
   }
 
   .u-section-1 .u-container-layout-2 {
@@ -130,7 +144,7 @@
   }
 
   .u-section-1 .u-image-1 {
-    min-height: 621px;
+    min-height: 749px;
   }
 
   .u-section-1 .u-container-layout-2 {
@@ -141,6 +155,60 @@
 
 @media (max-width: 575px) {
   .u-section-1 .u-image-1 {
-    min-height: 391px;
+    min-height: 472px;
+  }
+} .u-section-2 {
+  background-image: none;
+}
+
+.u-section-2 .u-sheet-1 {
+  min-height: 314px;
+}
+
+.u-section-2 .u-text-1 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 60px auto 0;
+}
+
+.u-section-2 .u-text-2 {
+  font-size: 3.75rem;
+  font-weight: 400;
+  margin: 75px auto 60px;
+}
+
+@media (max-width: 575px) {
+  .u-section-2 .u-text-2 {
+    font-size: 2.25rem;
+  }
+} .u-section-3 {
+  background-image: url("images/g5khdocikff61.webp");
+}
+
+.u-section-3 .u-sheet-1 {
+  min-height: 717px;
+}
+
+@media (max-width: 1199px) {
+  .u-section-3 .u-sheet-1 {
+    min-height: 591px;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-section-3 .u-sheet-1 {
+    min-height: 453px;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-3 .u-sheet-1 {
+    min-height: 340px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-3 .u-sheet-1 {
+    min-height: 214px;
   }
 }
