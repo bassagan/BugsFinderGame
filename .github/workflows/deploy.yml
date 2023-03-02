@@ -19,7 +19,9 @@ jobs:
         dotnet-version: 6.0.x
 
     - name: Build and publish API
-      run: dotnet publish -c Release -o /home/runner/.dotnet/HealthAPI -p HealthAPI.csproj
+      run: |
+        cd HealthAPI    # Replace "HealthAPI" with the directory name that contains your project file
+        dotnet publish -c Release -o /home/runner/.dotnet/HealthAPI -p HealthAPI.csproj
 
     - name: Deploy to Azure
       uses: azure/webapps-deploy@v2
