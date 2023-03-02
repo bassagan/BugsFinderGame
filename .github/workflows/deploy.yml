@@ -1,38 +1,25 @@
-name: Build and deploy .NET 6 API to Azure
+name: Deploy to Azure
 
 on:
   push:
     branches:
       - main
 
-env:
-  ASPNETCORE_ENVIRONMENT: Production
-
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: 6.0.x
-
-    - name: Restore dependencies
-      run: dotnet restore
-
-    - name: Build and publish API
-      run: |
-        cd HealthAPI    # Replace "HealthAPI" with the directory name that contains your project file
-        dotnet publish -c Release -o /home/runner/.dotnet/HealthAPI
-
-    - name: Deploy to Azure
-      uses: azure/webapps-deploy@v2
-      with:
-        app-name: hospital-system-api
-        publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-        package: /home/runner/.dotnet/HealthAPI
-        slot-name: Production
+      - uses: actions/checkout@v2
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '6.0.x'
+      - name: Build and publish
+        run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/HealthAPI/HealthAPI
+      - name: Deploy to Azure
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: hospital-system-api
+          slot-name: Production
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+          package: ${{env.DOTNET_ROOT}}/HealthAPI/HealthAPI
